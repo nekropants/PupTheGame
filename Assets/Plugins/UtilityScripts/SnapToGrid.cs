@@ -9,7 +9,7 @@ public class SnapToGrid : MonoBehaviour
 
     private MeshRenderer _renderer;
     [SerializeField]  private bool _snap;
-    [SerializeField]  private float _snapIncrement = 0.1f;
+    [SerializeField]  private float _snapIncrement = 0.25f;
     
     // Start is called before the first frame update
     void Start()

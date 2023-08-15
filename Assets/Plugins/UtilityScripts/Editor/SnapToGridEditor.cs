@@ -10,20 +10,20 @@ public class SnapToGridEditor : Editor
     [InitializeOnLoadMethod]
     private  static void Initialize()
     {
-        SceneView.onSceneGUIDelegate += OnSceneGUI;
+        // SceneView.onSceneGUIDelegate += OnSceneGUI;
 
     }
 
     private static void OnSceneGUI(SceneView sceneview)
     {
-        
+        return;
+        float snapIncrement = 0.025f;
         if (Event.current.isMouse == false || Event.current.type != EventType.MouseUp)
         {
             return;
         }
         // Undo.SetCurrentGroupName("Snap");
         int group = Undo.GetCurrentGroup();
-        Debug.Log("OnHierarchyChanged");
         List<Transform> snapChildren = new List<Transform>();
 
         for (int i = 0; i <  Selection.transforms.Length; i++)
@@ -50,23 +50,20 @@ public class SnapToGridEditor : Editor
             for (int i = 0; i < children.Count; i++)
             {
                 Undo.SetTransformParent(   children[i], null, true, "Snap");
-                Debug.Log("Set Parent " + children[i]);
             }
 
             Undo.RecordObject(transform, "Snap");
             if (snapToGrid)
             {
-                SnapBasedOnBounds(snapToGrid, 0.1f);
+                SnapBasedOnBounds(snapToGrid, snapIncrement);
             }
             else
             {
-                transform.position = Snapping.Snap(transform.position, Vector3.one * 0.1f);
+                transform.position = Snapping.Snap(transform.position, Vector3.one * snapIncrement);
             }
             
             for (int i = 0; i < children.Count; i++)
             {
-                
-                Debug.Log("Set Parent " + children[i]);
                 Undo.SetTransformParent(   children[i], transform, true, "Snap");
             }
         }
