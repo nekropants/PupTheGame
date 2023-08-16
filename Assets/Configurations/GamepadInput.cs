@@ -143,6 +143,17 @@ public partial class @GamepadInput: IInputActionCollection2, IDisposable
             ""name"": ""Gamepad"",
             ""bindingGroup"": ""Gamepad"",
             ""devices"": []
+        },
+        {
+            ""name"": ""GamepadScheme"",
+            ""bindingGroup"": ""GamepadScheme"",
+            ""devices"": [
+                {
+                    ""devicePath"": ""<Keyboard>"",
+                    ""isOptional"": false,
+                    ""isOR"": false
+                }
+            ]
         }
     ]
 }");
@@ -268,6 +279,15 @@ public partial class @GamepadInput: IInputActionCollection2, IDisposable
         {
             if (m_GamepadSchemeIndex == -1) m_GamepadSchemeIndex = asset.FindControlSchemeIndex("Gamepad");
             return asset.controlSchemes[m_GamepadSchemeIndex];
+        }
+    }
+    private int m_GamepadSchemeSchemeIndex = -1;
+    public InputControlScheme GamepadSchemeScheme
+    {
+        get
+        {
+            if (m_GamepadSchemeSchemeIndex == -1) m_GamepadSchemeSchemeIndex = asset.FindControlSchemeIndex("GamepadScheme");
+            return asset.controlSchemes[m_GamepadSchemeSchemeIndex];
         }
     }
     public interface IGameplayActions

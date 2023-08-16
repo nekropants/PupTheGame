@@ -121,6 +121,17 @@
             "name": "Gamepad",
             "bindingGroup": "Gamepad",
             "devices": []
+        },
+        {
+            "name": "GamepadScheme",
+            "bindingGroup": "GamepadScheme",
+            "devices": [
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
         }
     ]
 }

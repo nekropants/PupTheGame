@@ -15,5 +15,5 @@ MonoBehaviour:
   _pullForce: 70.2
   _buttPullForce: 5
   _jumpDelay: 0.1
-  _frontJump: 30
-  _backJump: 16
+  _frontJump: 10
+  _backJump: 5

@@ -7,6 +7,7 @@ using UnityEngine.InputSystem;
 
 public class DogController : MonoBehaviour
 {
+    private PlayerInput _playerInput;
     [SerializeField] private DogConfiguration _configuration;
     [SerializeField] private GamepadInput _controls;
     [SerializeField] private Transform _pullAnchor;
@@ -22,23 +23,32 @@ public class DogController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _controls = new GamepadInput();
-        _controls.Gameplay.Jump.performed += Jump;
-        _controls.Enable();
+        // _controls = new GamepadInput();
+        // _controls.Gameplay.Jump.performed += OnMove;
+        // _controls.Enable();
     }
 
-    private void Jump(InputAction.CallbackContext obj)
+    public void OnJump(InputAction.CallbackContext obj)
     {
         _jump.DoJump();
         // Debug.Log("Bark");
     }
+    
+    public void OnMove(InputAction.CallbackContext obj)
+    {
+        Vector2 readValue = obj.ReadValue<Vector2>();
+
+        _input = new Vector3(readValue.x, 0, readValue.y);
+    }
+
+
 
     private void Update()
     {
-        Vector2 readValue = _controls.Gameplay.Movement.ReadValue<Vector2>();
+        // Vector2 readValue = _controls.Gameplay.Movement.ReadValue<Vector2>();
 
 
-         _input = new Vector3(readValue.x, 0, readValue.y);
+         // _input = new Vector3(readValue.x, 0, readValue.y);
 
          foreach (var leg in _legs)
          {
