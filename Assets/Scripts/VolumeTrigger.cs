@@ -14,6 +14,9 @@ public class VolumeTrigger : MonoBehaviour
         _boxCollider = gameObject.AddComponent<BoxCollider>();
         _boxCollider.isTrigger = true;
         gameObject.layer = LayerMask.NameToLayer("Trigger");
+        
+        if(_enableGameObject)
+            _enableGameObject.gameObject.SetActive(false);
     }
 
     private void OnTriggerEnter(Collider other)
