@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level1.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/Dog_Olympic_Track_01.unity
+    guid: 0af831f39a6cc37429f1264ab6f7a1e6
+  - enabled: 1
+    path: Assets/Scenes/Scene_System.unity
+    guid: 3feadbdfc418c41c9bce7f7cd68f1f32
   m_configObjects: {}

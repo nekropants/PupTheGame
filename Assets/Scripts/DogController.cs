@@ -17,8 +17,8 @@ public class DogController : MonoBehaviour
     [SerializeField] private JumpScript _jump;
     [SerializeField] private Animator[] _legs;
     private Vector3 _input;
-    
-    
+
+    public Vector3 dogPosition => _chestRigidbody.transform.position;
 
     // Start is called before the first frame update
     void Start()
@@ -49,7 +49,7 @@ public class DogController : MonoBehaviour
 
 
          // _input = new Vector3(readValue.x, 0, readValue.y);
-
+    
          foreach (var leg in _legs)
          {
              leg.SetBool("Run", _input.magnitude > 0);
