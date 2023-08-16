@@ -14,6 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _pullForce: 70.2
   _buttPullForce: 5
-  _jumpDelay: 0.1
-  _frontJump: 9
-  _backJump: 5
+  _jumpDelay: 0
+  _frontJumpUp: 9
+  _frontJumpForward: 2
+  _midJumpUp: 0
+  _midJumpForward: 0
+  _backJumpUp: 5
+  _backJumpForward: 0
