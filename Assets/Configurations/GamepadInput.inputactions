@@ -15,7 +15,7 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Bark",
+                    "name": "Jump",
                     "type": "Button",
                     "id": "7acfa4b8-194e-45e2-86db-9c46eece3da6",
                     "expectedControlType": "Button",
@@ -98,7 +98,18 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Bark",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ef3f9085-8459-4479-8a48-8e451f998f1f",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

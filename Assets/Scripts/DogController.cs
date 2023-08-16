@@ -13,32 +13,37 @@ public class DogController : MonoBehaviour
     [SerializeField] private Transform _buttPullAnchor;
     [SerializeField] private Rigidbody _chestRigidbody;
     [SerializeField] private Rigidbody _buttRigidbody;
-    [SerializeField] private InputActionAsset _action;
+    [SerializeField] private JumpScript _jump;
+    [SerializeField] private Animator[] _legs;
     private Vector3 _input;
+    
+    
 
     // Start is called before the first frame update
     void Start()
     {
         _controls = new GamepadInput();
-        _controls.Gameplay.Bark.performed += Bark;
-        _controls.Gameplay.Movement.performed += Bark;
+        _controls.Gameplay.Jump.performed += Jump;
         _controls.Enable();
     }
 
-    private void Bark(InputAction.CallbackContext obj)
+    private void Jump(InputAction.CallbackContext obj)
     {
-        
+        _jump.DoJump();
         // Debug.Log("Bark");
     }
 
     private void Update()
     {
         Vector2 readValue = _controls.Gameplay.Movement.ReadValue<Vector2>();
-        Debug.Log(readValue);
 
 
          _input = new Vector3(readValue.x, 0, readValue.y);
 
+         foreach (var leg in _legs)
+         {
+             leg.SetBool("Run", _input.magnitude > 0);
+         }
          
          
             Debug.DrawRay(_pullAnchor.transform.position, _input, Color.red);
