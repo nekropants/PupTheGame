@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 
 
 public class DogController : MonoBehaviour
@@ -15,6 +16,7 @@ public class DogController : MonoBehaviour
     [SerializeField] private Rigidbody _chestRigidbody;
     [SerializeField] private Rigidbody _buttRigidbody;
     [SerializeField] private JumpScript _jump;
+      [SerializeField] private BiteScript _biteScript;
     [SerializeField] private Animator[] _legs;
     private Vector3 _input;
 
@@ -31,8 +33,27 @@ public class DogController : MonoBehaviour
     public void OnJump(InputAction.CallbackContext obj)
     {
         _jump.DoJump();
+    }
+    
+    public void OnBite(InputAction.CallbackContext obj)
+    {
+        _biteScript.DoBite();
+        
+        if (obj.performed)
+        {
+            _biteScript.DoBite();
+
+        }
+        else  if (obj.canceled)
+        {
+            _biteScript.DoRelease();
+        }
+        // _jump.DoJump();
         // Debug.Log("Bark");
     }
+    
+    
+  
     
     public void OnMove(InputAction.CallbackContext obj)
     {

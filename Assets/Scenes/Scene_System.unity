@@ -303,6 +303,32 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2110110166656800938, guid: 43310dd064fd64bad85a0902e9710d2a,
+        type: 3}
+      propertyPath: m_JoinBehavior
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2110110166656800938, guid: 43310dd064fd64bad85a0902e9710d2a,
+        type: 3}
+      propertyPath: m_JoinAction.m_Reference
+      value: 
+      objectReference: {fileID: 7823635075565328194, guid: 4721ef22b552747dfa13c72bb44e4b4e,
+        type: 3}
+    - target: {fileID: 2110110166656800938, guid: 43310dd064fd64bad85a0902e9710d2a,
+        type: 3}
+      propertyPath: m_JoinAction.m_Action.m_Id
+      value: ac7582e6-299b-4584-81dd-04793cb49a9e
+      objectReference: {fileID: 0}
+    - target: {fileID: 2110110166656800938, guid: 43310dd064fd64bad85a0902e9710d2a,
+        type: 3}
+      propertyPath: m_JoinAction.m_UseReference
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2110110166656800938, guid: 43310dd064fd64bad85a0902e9710d2a,
+        type: 3}
+      propertyPath: m_JoinAction.m_Action.m_Name
+      value: Join
+      objectReference: {fileID: 0}
     - target: {fileID: 3132248873927788173, guid: 43310dd064fd64bad85a0902e9710d2a,
         type: 3}
       propertyPath: m_RootOrder
