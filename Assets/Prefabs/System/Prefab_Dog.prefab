@@ -1220,7 +1220,7 @@ Transform:
   - {fileID: 1318708936687164545}
   - {fileID: 4808334566722181760}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!114 &928814803724246283
 MonoBehaviour:
@@ -1271,6 +1271,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _configuration: {fileID: 11400000, guid: 20723df8a69de40799aa477d371132c3, type: 2}
   _front: {fileID: 2081701645515910354}
+  _mid: {fileID: 0}
   _back: {fileID: 3386797732170848063}
 --- !u!114 &8694872076360814584
 MonoBehaviour:
@@ -1808,16 +1809,6 @@ PrefabInstance:
       propertyPath: m_ConnectedBody
       value: 
       objectReference: {fileID: 2081701645515910354}
-    - target: {fileID: 6289260441789603311, guid: c844aa2ccba814df8b9590ef8379ecf3,
-        type: 3}
-      propertyPath: m_AngularXMotion
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6289260441789603311, guid: c844aa2ccba814df8b9590ef8379ecf3,
-        type: 3}
-      propertyPath: m_AngularZMotion
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6289260441789603311, guid: c844aa2ccba814df8b9590ef8379ecf3,
         type: 3}
       propertyPath: m_AngularXDrive.positionDamper

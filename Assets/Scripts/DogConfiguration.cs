@@ -9,8 +9,15 @@ public class DogConfiguration : ScriptableObject
     [SerializeField] private float _buttPullForce;
 
     [SerializeField] private float _jumpDelay = 0.1f;
-    [SerializeField] private float _frontJump = 1f;
-    [SerializeField] private float _backJump = 1f;
+    [FormerlySerializedAs("_frontJump")] [SerializeField] private float _frontJumpUp = 1f;
+    [SerializeField] private float _frontJumpForward = 1f;
+    
+    
+      [SerializeField] private float _midJumpUp = 1f;
+     [SerializeField] private float _midJumpForward = 1f;
+     
+     [FormerlySerializedAs("_backJump")] [SerializeField] private float _backJumpUp = 1f;
+     [SerializeField] private float _backJumpForward = 1f;
 
     public float pullForce => _pullForce;
 
@@ -22,9 +29,17 @@ public class DogConfiguration : ScriptableObject
 
     public float jumpDelay => _jumpDelay;
 
-    public float frontJump => _frontJump;
+    public float frontJumpUp => _frontJumpUp;
 
-    public float backJump => _backJump;
+    public float backJumpUp => _backJumpUp;
+
+    public float frontJumpForward => _frontJumpForward;
+
+    public float backJumpForward => _backJumpForward;
+
+    public float midJumpForward => _midJumpForward;
+
+    public float midJumpUp => _midJumpUp;
 
     // public SmartCurve multiplyInputByDot
     // {
