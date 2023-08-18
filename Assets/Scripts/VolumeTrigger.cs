@@ -5,9 +5,15 @@ using UnityEngine;
 
 public class VolumeTrigger : MonoBehaviour
 {
+
+    // private List<DogController> _dogs = new List<DogController>();
     private BoxCollider _boxCollider;
 
     [SerializeField] private GameObject _enableGameObject;
+
+    public event Action<DogController> onDogEnter; 
+    // public List<DogController> dogs => _dogs;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +27,12 @@ public class VolumeTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        DogController dogController = other.GetComponentInParent<DogController>();
+        if (dogController)
+        {
+            onDogEnter?.Invoke(dogController);
+        }
+        
         _enableGameObject.gameObject.SetActive(true);
     }
 }

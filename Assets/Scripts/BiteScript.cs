@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
+
 public class BiteScript : MonoBehaviour
 {
     [SerializeField] private ParticleSystem _particles;
@@ -13,12 +14,17 @@ public class BiteScript : MonoBehaviour
 
     private List<Collider> _collider = new List<Collider>();
     private List<Joint> _joints = new List<Joint>();
-    
-    
+    private bool _isBiting;
+
+    public bool isBiting
+    {
+        get => _isBiting;
+    }
+
+
     public void DoBite()
     {
-        Debug.Log("Bite " );
-
+        _isBiting = true;
         List<Rigidbody> _rigidbodies = new List<Rigidbody>();
         foreach (Collider collider in _collider)
         {
@@ -34,14 +40,13 @@ public class BiteScript : MonoBehaviour
                     SpringController.CopySpring(joint, _configurableJointReferences);
                     _joints.Add(joint);
                     // joint.spring = 1000;
-                    joint.autoConfigureConnectedAnchor = false;
+                    joint.autoConfigureConnectedAnchor = true;
                     // joint.anchor
                     Vector3 point = _head.transform.InverseTransformPoint(_bitePoint.transform.position);
                     Debug.Log(point);
-                    joint.connectedAnchor = point;
+                    // joint.connectedAnchor = point;
 
                     point = _head.transform.InverseTransformVector(_bitePoint.transform.position);
-                    Debug.Log(point);
                     // point = _head.transform.InverseTransformDirection(_bitePoint.transform.position);
                     // Debug.Log(point);
                     // joint.damper = 2;
@@ -54,7 +59,7 @@ public class BiteScript : MonoBehaviour
 
     public void DoRelease()
     {
-        Debug.Log("DoRelease " );
+        _isBiting = false;
 
         foreach (Joint joint in _joints)
         {

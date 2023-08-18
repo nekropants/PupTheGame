@@ -19,8 +19,13 @@ public class DogConfiguration : ScriptableObject
      
      [FormerlySerializedAs("_backJump")] [SerializeField] private float _backJumpUp = 1f;
      [SerializeField] private float _backJumpForward = 1f;
+     [SerializeField] private float _barkForce = 1;
+     [SerializeField] private double _prizeGivingDuration = 30;
 
-    public float pullForce => _pullForce;
+
+     [SerializeField] private SceneReference[] _levels;
+
+     public float pullForce => _pullForce;
     public float upPullForce => _upPullForce;
 
     public float buttPullForce
@@ -42,6 +47,20 @@ public class DogConfiguration : ScriptableObject
     public float midJumpForward => _midJumpForward;
 
     public float midJumpUp => _midJumpUp;
+
+    public float barkForce
+    {
+        get => _barkForce;
+        set => _barkForce = value;
+    }
+
+    public double prizeGivingDuration
+    {
+        get => _prizeGivingDuration;
+    }
+
+    public SceneReference[] levels => _levels;
+    public SceneReference activeLevel { get; set; }
 
     // public SmartCurve multiplyInputByDot
     // {

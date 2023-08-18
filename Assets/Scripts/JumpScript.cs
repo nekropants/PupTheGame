@@ -7,14 +7,28 @@ public class JumpScript : MonoBehaviour
     [SerializeField] private Rigidbody _front;
     [SerializeField] private Rigidbody _mid;
     [SerializeField] private Rigidbody _back;
+    [SerializeField] private ColliderDetector _groundDetector;
+    [SerializeField] private ParticleSystem _jumpParticles;
+
 
     public void DoJump()
     {
-        StartCoroutine(IEDoJump());
+        if (_groundDetector.hasColliders)
+        {
+            StartCoroutine(IEDoJump());
+        }
     }
     
     private IEnumerator IEDoJump()
     {
+
+        // Physics.Raycast( _jumpParticles.transform.position + Vector3.up * 0.1f, Vector3.down,  out RaycastHit hit, 0.4f,1<< LayerMask.NameToLayer("Default"));
+
+        // if (hit.collider)
+        {
+            _jumpParticles.transform.forward = Vector3.up;
+        }
+        _jumpParticles.Play();
         _front.AddForce(Vector3.up*_configuration.frontJumpUp, ForceMode.Impulse);
         _front.AddForce(_front.transform.forward*_configuration.frontJumpForward, ForceMode.Impulse);
         

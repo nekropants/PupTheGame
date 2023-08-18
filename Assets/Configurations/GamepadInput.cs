@@ -53,6 +53,15 @@ public partial class @GamepadInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Escape"",
+                    ""type"": ""Button"",
+                    ""id"": ""08f34700-a9e9-4586-a2d9-3c2936e5f56c"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -139,7 +148,7 @@ public partial class @GamepadInput: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/upArrow"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Keyboard2"",
+                    ""groups"": ""Keyboard"",
                     ""action"": ""Movement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -231,6 +240,28 @@ public partial class @GamepadInput: IInputActionCollection2, IDisposable
                     ""action"": ""Bite"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b3dbf241-32c3-455b-93d6-6e20c780a4f4"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Escape"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""bd2d31c6-dea9-43d2-ab89-b48744fd1551"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Escape"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -276,6 +307,7 @@ public partial class @GamepadInput: IInputActionCollection2, IDisposable
         m_Gameplay_Movement = m_Gameplay.FindAction("Movement", throwIfNotFound: true);
         m_Gameplay_Jump = m_Gameplay.FindAction("Jump", throwIfNotFound: true);
         m_Gameplay_Bite = m_Gameplay.FindAction("Bite", throwIfNotFound: true);
+        m_Gameplay_Escape = m_Gameplay.FindAction("Escape", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -340,6 +372,7 @@ public partial class @GamepadInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_Gameplay_Movement;
     private readonly InputAction m_Gameplay_Jump;
     private readonly InputAction m_Gameplay_Bite;
+    private readonly InputAction m_Gameplay_Escape;
     public struct GameplayActions
     {
         private @GamepadInput m_Wrapper;
@@ -347,6 +380,7 @@ public partial class @GamepadInput: IInputActionCollection2, IDisposable
         public InputAction @Movement => m_Wrapper.m_Gameplay_Movement;
         public InputAction @Jump => m_Wrapper.m_Gameplay_Jump;
         public InputAction @Bite => m_Wrapper.m_Gameplay_Bite;
+        public InputAction @Escape => m_Wrapper.m_Gameplay_Escape;
         public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -365,6 +399,9 @@ public partial class @GamepadInput: IInputActionCollection2, IDisposable
             @Bite.started += instance.OnBite;
             @Bite.performed += instance.OnBite;
             @Bite.canceled += instance.OnBite;
+            @Escape.started += instance.OnEscape;
+            @Escape.performed += instance.OnEscape;
+            @Escape.canceled += instance.OnEscape;
         }
 
         private void UnregisterCallbacks(IGameplayActions instance)
@@ -378,6 +415,9 @@ public partial class @GamepadInput: IInputActionCollection2, IDisposable
             @Bite.started -= instance.OnBite;
             @Bite.performed -= instance.OnBite;
             @Bite.canceled -= instance.OnBite;
+            @Escape.started -= instance.OnEscape;
+            @Escape.performed -= instance.OnEscape;
+            @Escape.canceled -= instance.OnEscape;
         }
 
         public void RemoveCallbacks(IGameplayActions instance)
@@ -427,5 +467,6 @@ public partial class @GamepadInput: IInputActionCollection2, IDisposable
         void OnMovement(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
         void OnBite(InputAction.CallbackContext context);
+        void OnEscape(InputAction.CallbackContext context);
     }
 }

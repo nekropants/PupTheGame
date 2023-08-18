@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: DogConfiguration
   m_EditorClassIdentifier: 
   _pullForce: 70.2
+  _upPullForce: 10
   _buttPullForce: 5
   _jumpDelay: 0
   _frontJumpUp: 9
@@ -21,3 +22,8 @@ MonoBehaviour:
   _midJumpForward: 0
   _backJumpUp: 5
   _backJumpForward: 0
+  _barkForce: 2
+  _prizeGivingDuration: 30
+  _levels:
+  - _sceneAsset: {fileID: 102900000, guid: 0af831f39a6cc37429f1264ab6f7a1e6, type: 3}
+    _sceneName: Dog_Olympic_Track_01

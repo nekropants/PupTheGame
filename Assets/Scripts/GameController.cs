@@ -9,12 +9,14 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour
 {
     [SerializeField] private PlayerInputManager _playerInputManager;
+    [SerializeField] private AudioSource _audioSource;
     private List<DogController> _dogs = new List<DogController>();
- 
     
     public static GameController instance;
 
-  
+    public List<DogController> dogs => _dogs;
+
+
     private void Awake()
     {
         instance = this;
@@ -24,12 +26,15 @@ public class GameController : MonoBehaviour
     }
     private void OnPlayerLeft(PlayerInput obj)
     {
-        _dogs.Remove( obj.gameObject.GetComponent<DogController>());
+        dogs.Remove( obj.gameObject.GetComponent<DogController>());
     }
 
     private void OnPlayerJoined(PlayerInput obj)
     {
-        _dogs.Add( obj.gameObject.GetComponent<DogController>());
+        var dogController = obj.gameObject.GetComponent<DogController>();
+        dogs.Add( dogController);
+        
+        _audioSource.Play();
 
 
         SpawnVolume spawnVolume = FindObjectOfType<SpawnVolume>();
@@ -38,6 +43,9 @@ public class GameController : MonoBehaviour
         {
             obj.gameObject.transform.position = spawnVolume.transform.position;
         }
+        
+        if( PlayerColorController.Instance)
+            PlayerColorController.Instance.AssignRandomColor(dogController);
     }
 
 

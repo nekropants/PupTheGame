@@ -123,6 +123,30 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &291432841 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3905099313022507562, guid: 43310dd064fd64bad85a0902e9710d2a,
+    type: 3}
+  m_PrefabInstance: {fileID: 586257311}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &291432842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 291432841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 780177c9f40044b2c8d90a0cf6c36e12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _materialToReplace: {fileID: 2100000, guid: 795895e5c33584a7e988cfc62c4932b4, type: 2}
+  _colors:
+  - {fileID: 2100000, guid: 6f24ff6d7bab04102b22278d3c9ff5de, type: 2}
+  - {fileID: 2100000, guid: e5c10f38c928a43cfa1139c8fcac093c, type: 2}
+  - {fileID: 2100000, guid: 7b7dd1e2562f44a498beb4bb6fa7b71e, type: 2}
+  _remainingColors: []
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -310,6 +334,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2110110166656800938, guid: 43310dd064fd64bad85a0902e9710d2a,
         type: 3}
+      propertyPath: m_PlayerPrefab
+      value: 
+      objectReference: {fileID: 8662909597769309092, guid: 8124f154f023148c8804034b99c0ce51,
+        type: 3}
+    - target: {fileID: 2110110166656800938, guid: 43310dd064fd64bad85a0902e9710d2a,
+        type: 3}
       propertyPath: m_JoinAction.m_Reference
       value: 
       objectReference: {fileID: 7823635075565328194, guid: 4721ef22b552747dfa13c72bb44e4b4e,
@@ -397,7 +427,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3905099313022507562, guid: 43310dd064fd64bad85a0902e9710d2a,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 291432842}
   m_SourcePrefab: {fileID: 100100000, guid: 43310dd064fd64bad85a0902e9710d2a, type: 3}
 --- !u!114 &586257312 stripped
 MonoBehaviour:
