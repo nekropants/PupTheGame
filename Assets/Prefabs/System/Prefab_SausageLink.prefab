@@ -209,9 +209,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
-  m_Height: 1.25
+  m_Height: 1
   m_Direction: 2
-  m_Center: {x: 0, y: 0, z: 0.125}
+  m_Center: {x: -0.00000023841858, y: 0.00000035762787, z: 0.24668616}
 --- !u!1 &7782608428963130542
 GameObject:
   m_ObjectHideFlags: 0
@@ -223,7 +223,6 @@ GameObject:
   - component: {fileID: 1281800726538185665}
   - component: {fileID: 8967562684265670270}
   - component: {fileID: 6289260441789603311}
-  - component: {fileID: 2334515840325838090}
   m_Layer: 0
   m_Name: Prefab_SausageLink
   m_TagString: Untagged
@@ -258,7 +257,7 @@ Rigidbody:
   serializedVersion: 4
   m_Mass: 1
   m_Drag: 1
-  m_AngularDrag: 0.41
+  m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -292,40 +291,40 @@ ConfigurableJoint:
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
   m_YMotion: 0
-  m_ZMotion: 1
+  m_ZMotion: 0
   m_AngularXMotion: 1
-  m_AngularYMotion: 2
+  m_AngularYMotion: 1
   m_AngularZMotion: 0
   m_LinearLimitSpring:
-    spring: 13.55
+    spring: 0
     damper: 0
   m_LinearLimit:
     limit: 0
     bounciness: 0
     contactDistance: 0
   m_AngularXLimitSpring:
-    spring: 13.91
+    spring: 0
     damper: 0
   m_LowAngularXLimit:
-    limit: 1.63
+    limit: -80.06526
     bounciness: 0
     contactDistance: 0
   m_HighAngularXLimit:
-    limit: 19.34
+    limit: 75.6541
     bounciness: 0
     contactDistance: 0
   m_AngularYZLimitSpring:
-    spring: 30.17
+    spring: 0
     damper: 0
   m_AngularYLimit:
-    limit: 9.3
+    limit: 69.29437
     bounciness: 0
     contactDistance: 0
   m_AngularZLimit:
     limit: 0
     bounciness: 0
     contactDistance: 0
-  m_TargetPosition: {x: 2.73, y: 0.99, z: 46.23}
+  m_TargetPosition: {x: 0, y: 0, z: 0}
   m_TargetVelocity: {x: 0, y: 0, z: 0}
   m_XDrive:
     serializedVersion: 4
@@ -346,17 +345,17 @@ ConfigurableJoint:
     maximumForce: 3.4028233e+38
     useAcceleration: 0
   m_TargetRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_TargetAngularVelocity: {x: 96.34, y: 9.81, z: 0}
+  m_TargetAngularVelocity: {x: 0, y: 0, z: 0}
   m_RotationDriveMode: 0
   m_AngularXDrive:
     serializedVersion: 4
-    positionSpring: 233.8
+    positionSpring: 0
     positionDamper: 0
     maximumForce: 3.4028233e+38
     useAcceleration: 0
   m_AngularYZDrive:
     serializedVersion: 4
-    positionSpring: 255.3
+    positionSpring: 0
     positionDamper: 0
     maximumForce: 3.4028233e+38
     useAcceleration: 0
@@ -377,19 +376,3 @@ ConfigurableJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!114 &2334515840325838090
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7782608428963130542}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74f4b597d034e4b2181d50ba459c073d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _rigidbody: {fileID: 8967562684265670270}
-  _spring: {fileID: 6289260441789603311}
-  _configuration: {fileID: -419613868931912931, guid: 82c784ff7ec904414a5b1e6e67d4be1d,
-    type: 3}
