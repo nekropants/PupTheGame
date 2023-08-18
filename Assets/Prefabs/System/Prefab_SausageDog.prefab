@@ -4127,7 +4127,7 @@ GameObject:
   - component: {fileID: 8694872076360814584}
   - component: {fileID: 3767636101492265018}
   m_Layer: 7
-  m_Name: Prefab_Dog
+  m_Name: Prefab_SausageDog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4671,7 +4671,7 @@ PrefabInstance:
     - target: {fileID: 6289260441789603311, guid: c844aa2ccba814df8b9590ef8379ecf3,
         type: 3}
       propertyPath: m_AngularYLimit.limit
-      value: 48.73
+      value: 98.6
       objectReference: {fileID: 0}
     - target: {fileID: 6289260441789603311, guid: c844aa2ccba814df8b9590ef8379ecf3,
         type: 3}
@@ -4716,7 +4716,7 @@ PrefabInstance:
     - target: {fileID: 6289260441789603311, guid: c844aa2ccba814df8b9590ef8379ecf3,
         type: 3}
       propertyPath: m_AngularXDrive.positionSpring
-      value: 50.76
+      value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 6289260441789603311, guid: c844aa2ccba814df8b9590ef8379ecf3,
         type: 3}
@@ -4726,7 +4726,7 @@ PrefabInstance:
     - target: {fileID: 6289260441789603311, guid: c844aa2ccba814df8b9590ef8379ecf3,
         type: 3}
       propertyPath: m_AngularYZDrive.positionSpring
-      value: 32.69
+      value: 9.1
       objectReference: {fileID: 0}
     - target: {fileID: 7452584438061931861, guid: c844aa2ccba814df8b9590ef8379ecf3,
         type: 3}
@@ -5069,7 +5069,7 @@ PrefabInstance:
     - target: {fileID: 6289260441789603311, guid: c844aa2ccba814df8b9590ef8379ecf3,
         type: 3}
       propertyPath: m_AngularYLimit.limit
-      value: 48.73
+      value: 98.6
       objectReference: {fileID: 0}
     - target: {fileID: 6289260441789603311, guid: c844aa2ccba814df8b9590ef8379ecf3,
         type: 3}
@@ -5114,7 +5114,7 @@ PrefabInstance:
     - target: {fileID: 6289260441789603311, guid: c844aa2ccba814df8b9590ef8379ecf3,
         type: 3}
       propertyPath: m_AngularXDrive.positionSpring
-      value: 50.76
+      value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 6289260441789603311, guid: c844aa2ccba814df8b9590ef8379ecf3,
         type: 3}
@@ -5124,7 +5124,7 @@ PrefabInstance:
     - target: {fileID: 6289260441789603311, guid: c844aa2ccba814df8b9590ef8379ecf3,
         type: 3}
       propertyPath: m_AngularYZDrive.positionSpring
-      value: 32.69
+      value: 9.1
       objectReference: {fileID: 0}
     - target: {fileID: 7452584438061931861, guid: c844aa2ccba814df8b9590ef8379ecf3,
         type: 3}
@@ -5506,7 +5506,7 @@ PrefabInstance:
     - target: {fileID: 6289260441789603311, guid: c844aa2ccba814df8b9590ef8379ecf3,
         type: 3}
       propertyPath: m_AngularYLimit.limit
-      value: 48.73
+      value: 98.6
       objectReference: {fileID: 0}
     - target: {fileID: 6289260441789603311, guid: c844aa2ccba814df8b9590ef8379ecf3,
         type: 3}
@@ -5551,7 +5551,7 @@ PrefabInstance:
     - target: {fileID: 6289260441789603311, guid: c844aa2ccba814df8b9590ef8379ecf3,
         type: 3}
       propertyPath: m_AngularXDrive.positionSpring
-      value: 50.76
+      value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 6289260441789603311, guid: c844aa2ccba814df8b9590ef8379ecf3,
         type: 3}
@@ -5561,7 +5561,7 @@ PrefabInstance:
     - target: {fileID: 6289260441789603311, guid: c844aa2ccba814df8b9590ef8379ecf3,
         type: 3}
       propertyPath: m_AngularYZDrive.positionSpring
-      value: 32.69
+      value: 9.1
       objectReference: {fileID: 0}
     - target: {fileID: 7452584438061931861, guid: c844aa2ccba814df8b9590ef8379ecf3,
         type: 3}
@@ -5864,7 +5864,7 @@ PrefabInstance:
     - target: {fileID: 6289260441789603311, guid: c844aa2ccba814df8b9590ef8379ecf3,
         type: 3}
       propertyPath: m_AngularYLimit.limit
-      value: 48.73
+      value: 98.6
       objectReference: {fileID: 0}
     - target: {fileID: 6289260441789603311, guid: c844aa2ccba814df8b9590ef8379ecf3,
         type: 3}
@@ -5909,7 +5909,7 @@ PrefabInstance:
     - target: {fileID: 6289260441789603311, guid: c844aa2ccba814df8b9590ef8379ecf3,
         type: 3}
       propertyPath: m_AngularXDrive.positionSpring
-      value: 50.76
+      value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 6289260441789603311, guid: c844aa2ccba814df8b9590ef8379ecf3,
         type: 3}
@@ -5924,7 +5924,7 @@ PrefabInstance:
     - target: {fileID: 6289260441789603311, guid: c844aa2ccba814df8b9590ef8379ecf3,
         type: 3}
       propertyPath: m_AngularYZDrive.positionSpring
-      value: 32.69
+      value: 9.1
       objectReference: {fileID: 0}
     - target: {fileID: 7452584438061931861, guid: c844aa2ccba814df8b9590ef8379ecf3,
         type: 3}
@@ -6129,7 +6129,7 @@ PrefabInstance:
     - target: {fileID: 6289260441789603311, guid: c844aa2ccba814df8b9590ef8379ecf3,
         type: 3}
       propertyPath: m_AngularYLimit.limit
-      value: 48.73
+      value: 98.6
       objectReference: {fileID: 0}
     - target: {fileID: 6289260441789603311, guid: c844aa2ccba814df8b9590ef8379ecf3,
         type: 3}
@@ -6174,7 +6174,7 @@ PrefabInstance:
     - target: {fileID: 6289260441789603311, guid: c844aa2ccba814df8b9590ef8379ecf3,
         type: 3}
       propertyPath: m_AngularXDrive.positionSpring
-      value: 50.76
+      value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 6289260441789603311, guid: c844aa2ccba814df8b9590ef8379ecf3,
         type: 3}
@@ -6184,7 +6184,7 @@ PrefabInstance:
     - target: {fileID: 6289260441789603311, guid: c844aa2ccba814df8b9590ef8379ecf3,
         type: 3}
       propertyPath: m_AngularYZDrive.positionSpring
-      value: 32.69
+      value: 9.1
       objectReference: {fileID: 0}
     - target: {fileID: 7452584438061931861, guid: c844aa2ccba814df8b9590ef8379ecf3,
         type: 3}
