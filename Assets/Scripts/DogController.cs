@@ -86,7 +86,7 @@ public class DogController : MonoBehaviour
         float dot = Vector3.Dot(_chestRigidbody.transform.forward, _input);
 
         // float directionModifier = _configuration.multiplyInputByDot.Evaluate(dot);
-        _chestRigidbody.AddForceAtPosition(_input*_configuration.pullForce, _pullAnchor.transform.position);
+        _chestRigidbody.AddForceAtPosition(_input*_configuration.pullForce + Vector3.up*_configuration.upPullForce, _pullAnchor.transform.position);
         _buttRigidbody.AddForceAtPosition(-_input*_configuration.buttPullForce, _buttPullAnchor.transform.position);
     }
 

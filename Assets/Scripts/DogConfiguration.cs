@@ -5,6 +5,7 @@ using UnityEngine.Serialization;
 public class DogConfiguration : ScriptableObject
 {
     [SerializeField] private float _pullForce;
+    [SerializeField] private float _upPullForce;
 
     [SerializeField] private float _buttPullForce;
 
@@ -20,6 +21,7 @@ public class DogConfiguration : ScriptableObject
      [SerializeField] private float _backJumpForward = 1f;
 
     public float pullForce => _pullForce;
+    public float upPullForce => _upPullForce;
 
     public float buttPullForce
     {
