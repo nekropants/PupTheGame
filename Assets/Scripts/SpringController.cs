@@ -50,14 +50,17 @@ public class SpringController : MonoBehaviour
         // toSpring.autoConfigureConnectedAnchor = fromSpring.autoConfigureConnectedAnchor;
         // toSpring.axis = fromSpring.axis;
         // toSpring.secondaryAxis = fromSpring.secondaryAxis;
-        toSpring.connectedAnchor = fromSpring.connectedAnchor;
+        if (toSpring.autoConfigureConnectedAnchor == false)
+        {
+            toSpring.connectedAnchor = fromSpring.connectedAnchor;
+            toSpring.anchor = fromSpring.anchor;
+        }
         toSpring.rotationDriveMode = fromSpring.rotationDriveMode;
         toSpring.targetPosition = fromSpring.targetPosition;
         toSpring.targetVelocity = fromSpring.targetVelocity;
         toSpring.targetAngularVelocity = fromSpring.targetAngularVelocity;
         toSpring.targetRotation = fromSpring.targetRotation;
         //
-        toSpring.anchor = fromSpring.anchor;
         toSpring.xDrive = fromSpring.xDrive;
         toSpring.yDrive = fromSpring.yDrive;
         toSpring.zDrive = fromSpring.zDrive;

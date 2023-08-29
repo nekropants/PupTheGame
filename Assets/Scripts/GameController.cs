@@ -41,7 +41,7 @@ public class GameController : MonoBehaviour
 
         if (spawnVolume)
         {
-            obj.gameObject.transform.position = spawnVolume.transform.position;
+            obj.gameObject.transform.position = spawnVolume.GetRandomSpawnPosition();
         }
         
         if( PlayerColorController.Instance)
