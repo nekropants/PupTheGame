@@ -9,10 +9,10 @@ EditorBuildSettings:
     path: Assets/Scenes/Scene_Menu.unity
     guid: 67e519528517d48a487743db70b16825
   - enabled: 1
-    path: Assets/Scenes/Level1.unity
+    path: Assets/Scenes/Level1_Delete.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
-    path: Assets/Scenes/Dog_Olympic_Track_01.unity
+    path: Assets/Scenes/Scene_Race.unity
     guid: 0af831f39a6cc37429f1264ab6f7a1e6
   - enabled: 1
     path: Assets/Scenes/Scene_System.unity
@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Scene_PrizeGiving.unity
     guid: 957bda4db07604765aa1122895858d20
+  - enabled: 1
+    path: Assets/Scenes/Scene_Controls.unity
+    guid: b65fc72bc214b4324b0ad65a32ee9950
   m_configObjects: {}

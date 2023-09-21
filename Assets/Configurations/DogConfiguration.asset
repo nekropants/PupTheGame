@@ -22,8 +22,10 @@ MonoBehaviour:
   _midJumpForward: 0
   _backJumpUp: 5
   _backJumpForward: 0
-  _barkForce: 2
+  _barkForce: 1
   _prizeGivingDuration: 30
   _levels:
   - _sceneAsset: {fileID: 102900000, guid: 0af831f39a6cc37429f1264ab6f7a1e6, type: 3}
     _sceneName: Dog_Olympic_Track_01
+  _biteHeadKickBack: -1
+  _spitItOutForce: 0.1

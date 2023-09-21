@@ -4,7 +4,7 @@ using System.Collections;
 /// <summary>
 /// Static wrapper for keyboard input.
 /// </summary>
-public static class Keyboard
+public static class KeyboardInput
 {
     /// <summary>
     /// Whether or not any key is currently held down.

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 
 
 public class BiteScript : MonoBehaviour
@@ -11,10 +12,13 @@ public class BiteScript : MonoBehaviour
     [SerializeField] private Rigidbody _head;
     [SerializeField] private Transform _bitePoint;
     [SerializeField] private ConfigurableJoint _configurableJointReferences;
+    [SerializeField]  private  UnityEvent onBite;
+    [SerializeField]  private  DogConfiguration _configuration;
 
     private List<Collider> _collider = new List<Collider>();
     private List<Joint> _joints = new List<Joint>();
     private bool _isBiting;
+
 
     public bool isBiting
     {
@@ -25,6 +29,10 @@ public class BiteScript : MonoBehaviour
     public void DoBite()
     {
         _isBiting = true;
+        
+        onBite.Invoke();
+        _head.AddForceAtPosition(_configuration.biteHeadKickBack*Vector3.up, _bitePoint.transform.position, ForceMode.Impulse);
+
         List<Rigidbody> _rigidbodies = new List<Rigidbody>();
         foreach (Collider collider in _collider)
         {
@@ -51,6 +59,7 @@ public class BiteScript : MonoBehaviour
                     // Debug.Log(point);
                     // joint.damper = 2;
                     joint.connectedBody = _head;
+                    
 
                 }
             }
@@ -65,7 +74,9 @@ public class BiteScript : MonoBehaviour
         {
             if (joint)
             {
+                Rigidbody rigidbody = joint.GetComponent<Rigidbody>();
                 Destroy(joint);
+                rigidbody.AddForce(_head.transform.forward*_configuration.spitItOutForce, ForceMode.Impulse);
             }
         } 
         

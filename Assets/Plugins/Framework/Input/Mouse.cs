@@ -4,7 +4,7 @@ using System.Collections;
 /// <summary>
 /// Static wrapper for mouse input.
 /// </summary>
-public static class Mouse
+public static class MouseInput
 {
     public enum Button
     {

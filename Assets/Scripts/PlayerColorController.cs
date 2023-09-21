@@ -18,6 +18,12 @@ public class PlayerColorController : SingletonBehaviour<PlayerColorController>
     // Update is called once per frame
     public void AssignRandomColor(DogController dog)
     {
+
+        if (dog == null)
+        {
+            Debug.Log("Dog is null");
+            return;
+        }
         
         Material material;
         

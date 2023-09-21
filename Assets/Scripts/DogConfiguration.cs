@@ -24,6 +24,8 @@ public class DogConfiguration : ScriptableObject
 
 
      [SerializeField] private SceneReference[] _levels;
+     [SerializeField] private float _biteHeadKickBack;
+     [SerializeField] private float _spitItOutForce;
 
      public float pullForce => _pullForce;
     public float upPullForce => _upPullForce;
@@ -61,6 +63,18 @@ public class DogConfiguration : ScriptableObject
 
     public SceneReference[] levels => _levels;
     public SceneReference activeLevel { get; set; }
+
+    public float biteHeadKickBack
+    {
+        get => _biteHeadKickBack;
+        set => _biteHeadKickBack = value;
+    }
+
+    public float spitItOutForce
+    {
+        get => _spitItOutForce;
+        set => _spitItOutForce = value;
+    }
 
     // public SmartCurve multiplyInputByDot
     // {

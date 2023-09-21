@@ -1,11 +1,14 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class RaceStartController : MonoBehaviour
 {
     [SerializeField]  private StartingLightPole [] _poles;
     [SerializeField]  private SpringController [] _gates;
     [SerializeField]  private SpringConfiguration _openGate;
+    [SerializeField]  private UnityEvent _onLight;
+    [SerializeField]  private UnityEvent _onGun;
     private void Start()
     {
         foreach (var startingLightPole in _poles)
@@ -36,7 +39,7 @@ public class RaceStartController : MonoBehaviour
         }
         
         yield return new WaitForSeconds(5);
-
+    
 
         foreach (var startingLightPole in _poles)
         {
@@ -44,7 +47,9 @@ public class RaceStartController : MonoBehaviour
             {
                 startingLightPole.red.SetOn();
             }
+            
         }
+        _onLight.Invoke();
         
         yield return new WaitForSeconds(interval);
         
@@ -56,6 +61,7 @@ public class RaceStartController : MonoBehaviour
                 startingLightPole.amber.SetOn();
             }
         }
+        _onLight.Invoke();
 
         yield return new WaitForSeconds(interval);
         
@@ -68,6 +74,7 @@ public class RaceStartController : MonoBehaviour
                 startingLightPole.startEffects.gameObject.SetActive(true);
             }
         }
+        yield return new WaitForSeconds(interval);
 
         foreach (var gate in _gates)    
         {
@@ -76,5 +83,6 @@ public class RaceStartController : MonoBehaviour
                 gate.SetConfig(_openGate);
             }
         }
+        _onGun.Invoke();
     }
 }

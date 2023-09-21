@@ -21,11 +21,12 @@ public class BarkScript : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(Random.Range(1, 4f));
+            yield return new WaitForSeconds(Random.Range(1, 12f));
             if (_biteScript.isBiting == false)
             {
                 DoBark();            
             }
+         
         }
     }
 

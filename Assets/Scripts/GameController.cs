@@ -31,10 +31,13 @@ public class GameController : MonoBehaviour
 
     private void OnPlayerJoined(PlayerInput obj)
     {
+        Debug.Log("OnPlayerJoined " + obj, obj);
+
         var dogController = obj.gameObject.GetComponent<DogController>();
         dogs.Add( dogController);
         
         _audioSource.Play();
+        
 
 
         SpawnVolume spawnVolume = FindObjectOfType<SpawnVolume>();

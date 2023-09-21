@@ -54,8 +54,8 @@ public class DogController : MonoBehaviour
     public void OnBite(InputAction.CallbackContext obj)
     {
         
-        _biteScript.DoBite();
-        
+        // _biteScript.DoBite();
+            
         if (obj.performed)
         {
             _biteScript.DoBite();

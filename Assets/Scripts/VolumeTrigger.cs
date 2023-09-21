@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class VolumeTrigger : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class VolumeTrigger : MonoBehaviour
     private BoxCollider _boxCollider;
 
     [SerializeField] private GameObject _enableGameObject;
-
+    [SerializeField] private UnityEvent _onDogEnter; 
     public event Action<DogController> onDogEnter; 
     // public List<DogController> dogs => _dogs;
 
@@ -31,8 +32,10 @@ public class VolumeTrigger : MonoBehaviour
         if (dogController)
         {
             onDogEnter?.Invoke(dogController);
+            _onDogEnter?.Invoke();
         }
         
-        _enableGameObject.gameObject.SetActive(true);
+        if(_enableGameObject)
+            _enableGameObject.gameObject.SetActive(true);
     }
 }
