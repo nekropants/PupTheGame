@@ -120,10 +120,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _autoRegenerate: 1
   _meshAsset: {fileID: 0}
+  pivot: {x: 0, y: 0, z: 0}
+  MyRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
   _bevel: 0.03
   _bevelSubdivisions: 3
   _shearX: 0
   _shearZ: 0
+  size: {x: 0, y: 0, z: 0}
   forceRegenerate: 0
 --- !u!1 &3127015825759369377
 GameObject:
